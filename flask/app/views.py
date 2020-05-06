@@ -1,8 +1,10 @@
+from app import app
+import os
 from flask import Flask, render_template, g, redirect, url_for
 from flask_oidc import OpenIDConnect
 from okta import UsersClient
 
-app = Flask(__name__)
+#app = Flask(__name__)
 app.config["OIDC_CLIENT_SECRETS"] = "client_secrets.json"
 app.config["OIDC_COOKIE_SECURE"] = False
 app.config["OIDC_CALLBACK_ROUTE"] = "/oidc/callback"
